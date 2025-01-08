@@ -1,0 +1,24 @@
+services:
+  esphome:
+    container_name: esphome
+    image: ghcr.io/esphome/esphome:2024.12
+    environment:
+      - TZ=Europe/Brussels
+      # verander mij:
+      #- USERNAME=USERNAME
+      #- PASSWORD=password
+    volumes:
+      - esphome-config:/config
+      - /etc/localtime:/etc/localtime:ro
+    restart: always
+    privileged: true
+    network_mode: host
+
+# volumes for mapping data,config and log
+volumes:
+  esphome-config:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: "./config"
