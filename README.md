@@ -28,7 +28,7 @@ cd /opt
 ```
 ## Stap 6: Clone de repository en ga naar de containers-directory
 ```
-git clone https://github.com/De-Backer/docker-template.git containers && cd containers
+git clone --depth 1 https://github.com/De-Backer/docker-template.git containers && cd containers
 ```
 ## Stap 7: Verwijder ongewenste mappen
 Gebruik de volgende opdracht om specifieke mappen te verwijderen:
@@ -75,7 +75,7 @@ cd /opt
 ```
 ## Step 6: Clone the repository and Navigate to the containers directory
 ```
-git clone https://github.com/De-Backer/docker-template.git containers && cd containers
+git clone --depth 1 https://github.com/De-Backer/docker-template.git containers && cd containers
 ```
 ## Step 7: Remove unwanted folders
 Use the following command to delete specific folders:
