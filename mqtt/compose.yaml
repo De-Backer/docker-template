@@ -1,0 +1,37 @@
+services:
+  mqtt:
+    container_name: mqtt
+    image: eclipse-mosquitto:2.0.20-openssl
+    environment:
+      - TZ=Europe/Brussels
+    ports:
+      - "1883:1883" #default mqtt port
+      - "9001:9001" #default mqtt port for websockets
+    networks:
+      - frontend
+    volumes:
+      - mqtt5-config:/mosquitto/config
+      - mqtt5-data:/mosquitto/data
+      - mqtt5-log:/mosquitto/log
+    restart: unless-stopped
+
+# volumes for mapping data,config and log
+volumes:
+  mqtt5-config:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: "./config"
+  mqtt5-data:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: "./data"
+  mqtt5-log:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: "./log"
