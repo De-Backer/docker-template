@@ -1,0 +1,21 @@
+services:
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ce:2.21.5
+    environment:
+      - TZ=Europe/Brussels
+    restart: always
+    ports:
+      - "9000:9000/tcp"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer-data:/data
+
+# volumes for mapping data,config and log
+volumes:
+  portainer-data:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: "./data"
