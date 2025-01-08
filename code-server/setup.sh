@@ -6,4 +6,4 @@ mkdir -p ./config
 # Optioneel: geef rechten zodat containers toegang hebben
 chmod -R 755 ./config
 
-echo "Mappen zijn voorbereid. Start nu je containers met 'docker-compose up'."
+echo "De mappen in $(pwd) zijn voorbereid. Start nu je containers met 'docker-compose up'."
