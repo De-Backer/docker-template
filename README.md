@@ -26,9 +26,9 @@ apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-co
 ```
 cd /opt
 ```
-## Stap 6: Clone de repository
+## Stap 6: Clone de repository en ga naar de containers-directory
 ```
-git clone https://github.com/De-Backer/docker-template.git containers
+git clone https://github.com/De-Backer/docker-template.git containers && cd containers
 ```
 ## Stap 7: Verwijder ongewenste mappen
 Gebruik de volgende opdracht om specifieke mappen te verwijderen:
@@ -73,9 +73,9 @@ apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker
 ```
 cd /opt
 ```
-## Step 6: Clone the repository
+## Step 6: Clone the repository and Navigate to the containers directory
 ```
-git clone https://github.com/De-Backer/docker-template.git containers
+git clone https://github.com/De-Backer/docker-template.git containers && cd containers
 ```
 ## Step 7: Remove unwanted folders
 Use the following command to delete specific folders:
