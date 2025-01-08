@@ -10,4 +10,4 @@ chmod -R 755 ./config
 chmod -R 755 ./data
 chmod -R 755 ./log
 
-echo "Mappen zijn voorbereid. Start nu je containers met 'docker-compose up'."
+echo "De mappen in $(pwd) zijn voorbereid. Start nu je containers met 'docker-compose up'."
