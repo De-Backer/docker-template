@@ -54,6 +54,14 @@ if [ $? -eq 0 ]; then
 fi
 
 # Run docker-compose up in alle sub-dirs
+ask_confirmation "Run chmod +x setup.sh && setup.sh in alle sub-dirs"
+if [ $? -eq 0 ]; then
+    echo "- build -----------------------"
+    find . -type f -name "setup.sh" -execdir chmod +x setup.sh \; || echo "Fout bij het uitvoeren van chmod +x setup.sh"
+    find . -type f -name "setup.sh" -execdir ./setup.sh \; || echo "Fout bij het uitvoeren van setup.sh"
+fi
+
+# Run docker-compose up in alle sub-dirs
 ask_confirmation "Run docker-compose up -d in alle sub-dirs"
 if [ $? -eq 0 ]; then
     echo "- build -----------------------"
