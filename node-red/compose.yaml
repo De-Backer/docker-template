@@ -1,0 +1,26 @@
+services:
+  nodered:
+    container_name: nodered
+    image: nodered/node-red:4.0.8
+    environment:
+      - TZ=Europe/Brussels
+    ports:
+      - "1880:1880"
+    networks:
+      - frontend
+    volumes:
+      - node-red-data:/data
+    restart: unless-stopped
+
+# volumes for mapping data,config and log
+volumes:
+  node-red-data:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: "./data"
+
+networks:
+  frontend:
+    external: true
