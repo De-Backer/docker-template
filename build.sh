@@ -64,6 +64,7 @@ fi
 # Run docker-compose up in alle sub-dirs
 ask_confirmation "Run docker-compose up -d in alle sub-dirs"
 if [ $? -eq 0 ]; then
+    echo " koffie tijd, dit duurt effe. maar je moet niets meer doen in deze term."
     echo "- build -----------------------"
     find . -type f -name "compose.yaml" -execdir docker compose up -d \; || echo "Fout bij het uitvoeren van docker-compose."
 fi
