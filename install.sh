@@ -23,7 +23,7 @@ for vereiste_programma in "${VEREISTE_PROGRAMMAS[@]}"; do
                 fi
             else
                 if command -v apt &> /dev/null; then
-                    apt update && sudo apt install -y $vereiste_programma
+                    apt update && apt install -y $vereiste_programma
                 elif command -v yum &> /dev/null; then
                     yum install -y $vereiste_programma
                 elif command -v dnf &> /dev/null; then
@@ -92,7 +92,7 @@ for vereiste_programma in "${VEREISTE_PROGRAMMAS[@]}"; do
                 fi
             else
                 if command -v apt &> /dev/null; then
-                    apt update && sudo apt install -y $vereiste_programma
+                    apt update && apt install -y $vereiste_programma
                 elif command -v yum &> /dev/null; then
                     yum install -y $vereiste_programma
                 elif command -v dnf &> /dev/null; then
