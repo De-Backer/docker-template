@@ -16,7 +16,7 @@ chmod +x install.sh
 ./install.sh
 ```
 
-## Als je aanpasing gedaan hebt Voer je enkel start.sh uit
+## Als je al install.sh gebruikt hebt, dan gebruik je build.sh voor bulk rebuild docker container's
 ```
-./start.sh
+./build.sh
 ```
