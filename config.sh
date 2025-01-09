@@ -7,9 +7,12 @@ if [ ${#folders[@]} -eq 0 ]; then
     exit 0
 fi
 
+echo "--------------------------"
+echo " we gaan nu in alle folder's gaan"
+echo " om instelling aan te passen."
 for folder in "${folders[@]}"; do
     cd "$folder" || continue
-    echo "  map: $folder"
+    echo " Nu in map: $folder"
     read -p "druk op enter"
 
     # Zoek en open setup.sh en compose.yaml
