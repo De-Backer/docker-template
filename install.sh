@@ -111,6 +111,18 @@ for vereiste_programma in "${VEREISTE_PROGRAMMAS[@]}"; do
     fi
 done
 
+read -p "Manage Docker as a non-root user? (y/n): " install_choice
+if [[ "$install_choice" =~ ^[Yy]$ ]]; then
+    if command -v sudo &> /dev/null; then
+        sudo groupadd docker
+        sudo usermod -aG docker $USER
+    else
+        groupadd docker
+        usermod -aG docker $USER
+    fi
+    newgrp docker
+fi
+
 echo "---------------------------------------------------------------------"
 echo "Stap 5: Verwijder ongewenste mappen"
 read -p "druk op enter"
