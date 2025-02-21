@@ -8,7 +8,7 @@ for vereiste_programma in "${VEREISTE_PROGRAMMAS[@]}"; do
     echo "Controleer of $vereiste_programma geïnstalleerd is."
     if ! command -v $vereiste_programma &> /dev/null; then
         echo "$vereiste_programma is niet geïnstalleerd."
-        read -p "Wil je $vereiste_programma installeren? (y/n): " install_choice
+        read -p "Wil je $vereiste_programma installeren? (y/n Beëindigen): " install_choice
         if [[ "$install_choice" =~ ^[Yy]$ ]]; then
             if command -v sudo &> /dev/null; then
                 if command -v apt &> /dev/null; then
@@ -77,7 +77,7 @@ for vereiste_programma in "${VEREISTE_PROGRAMMAS[@]}"; do
     echo "Controleer of $vereiste_programma geïnstalleerd is."
     if ! command -v $vereiste_programma &> /dev/null; then
         echo "$vereiste_programma is niet geïnstalleerd."
-        read -p "Wil je $vereiste_programma installeren? (y/n): " install_choice
+        read -p "Wil je $vereiste_programma installeren? (y/n Beëindigen): " install_choice
         if [[ "$install_choice" =~ ^[Yy]$ ]]; then
             if command -v sudo &> /dev/null; then
                 if command -v apt &> /dev/null; then
