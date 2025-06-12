@@ -1,7 +1,7 @@
 services:
   hbbs:
     container_name: hbbs
-    image: docker.io/rustdesk/rustdesk-server-pro:latest
+    image: docker.io/rustdesk/rustdesk-server:latest
     command: hbbs
     volumes:
       - ./data:/root
@@ -13,7 +13,7 @@ services:
 
   hbbr:
     container_name: hbbr
-    image: docker.io/rustdesk/rustdesk-server-pro:latest
+    image: docker.io/rustdesk/rustdesk-server:latest
     command: hbbr
     volumes:
       - ./data:/root
