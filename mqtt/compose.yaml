@@ -1,7 +1,7 @@
 services:
   mqtt:
     container_name: mqtt
-    image: eclipse-mosquitto:2.0.20-openssl
+    image: eclipse-mosquitto:2.0.22-openssl
     environment:
       - TZ=Europe/Brussels
     ports:
