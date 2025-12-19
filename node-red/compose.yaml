@@ -1,7 +1,7 @@
 services:
   nodered:
     container_name: nodered
-    image: nodered/node-red:4.0.8
+    image: nodered/node-red:4.1.2-22
     environment:
       - TZ=Europe/Brussels
     ports:
