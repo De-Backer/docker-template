@@ -1,7 +1,7 @@
 services:
   portainer:
     container_name: portainer
-    image: portainer/portainer-ce:2.33.6
+    image: portainer/portainer-ce:2.38.1
     environment:
       - TZ=Europe/Brussels
     restart: always
